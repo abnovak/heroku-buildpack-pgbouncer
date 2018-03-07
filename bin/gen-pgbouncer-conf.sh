@@ -99,7 +99,7 @@ $CLIENT_DB_NAME= dbname=$DB_NAME port=610${n}
 EOFEOF
   else
   cat >> /app/vendor/pgbouncer/pgbouncer.ini << EOFEOF
-$CLIENT_DB_NAME= dbname=$DB_NAME port=610${n} pool_size=${PGBOUNCER_REPLICA_POOL_SIZE:${PGBOUNCER_DEFAULT_POOL_SIZE:-100}} max_db_connections=${PGBOUNCER_REPLICA_MAX_DB_CONNECTIONS:${PGBOUNCER_MAX_CLIENT_CONN:-1}}
+$CLIENT_DB_NAME= dbname=$DB_NAME port=610${n} pool_size=${PGBOUNCER_REPLICA_POOL_SIZE:-100} max_db_connections=${PGBOUNCER_REPLICA_MAX_DB_CONNECTIONS:-1}
 EOFEOF
   fi
 
